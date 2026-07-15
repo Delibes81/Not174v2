@@ -1,27 +1,54 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, GraduationCap, Library, FileText } from "lucide-react";
+import { BookOpen, GraduationCap, Library, FileText, ChevronRight } from "lucide-react";
 
 export default function Publicaciones() {
   const books = [
     {
-      title: "Ley del Notariado para la Ciudad de México",
-      subtitle: "Comentada y Concordada",
-      desc: "Análisis y comentarios sistemáticos sobre el marco legal que rige la función notarial en la capital. Una obra indispensable para el estudio práctico y doctrinal de la materia.",
-      year: "2018"
+      title: "Ley del Notariado para la Ciudad de México y su Reglamento",
+      subtitle: "Edición 2023",
+      year: "2023"
     },
     {
-      title: "Reglamento de la Ley del Notariado para la Ciudad de México",
-      subtitle: "Estudio Práctico",
-      desc: "Estudio detallado de las disposiciones reglamentarias y su aplicación práctica en las notarías, desmenuzando los procedimientos administrativos y de control.",
-      year: "2020"
+      title: "Ley del Notariado para el Distrito Federal",
+      subtitle: "3° Edición Actualizada",
+      year: "2013"
     },
     {
       title: "Notariado del Distrito Federal",
-      subtitle: "Historia y Evolución",
-      desc: "Obra de referencia histórica y dogmática sobre la evolución e instituciones del notariado local, desde sus orígenes hasta la era contemporánea.",
-      year: "2015"
+      subtitle: "2° Edición Actualizada (1° Edición 2006)",
+      year: "2010"
+    },
+    {
+      title: "Venta Judicial",
+      subtitle: "Colección de Temas Jurídicos en Breviarios # 40",
+      year: "2009"
+    },
+    {
+      title: "La Función Notarial en el Nuevo Derecho Agrario",
+      subtitle: "2° Edición Actualizada. Temas Jurídicos en Breviarios #1",
+      year: "2009"
+    },
+    {
+      title: "Ley del Notariado del DF Correlacionada",
+      subtitle: "2º Edición Actualizada",
+      year: "2003"
+    },
+    {
+      title: "Ley de Inversión Extranjera y su Reglamento",
+      subtitle: "2º Edición Actualizada",
+      year: "2002"
+    },
+    {
+      title: "Leyes Financieras Sociales (2 Volúmenes)",
+      subtitle: "Primera Edición",
+      year: "2002"
+    },
+    {
+      title: "Nacionalidad y Población",
+      subtitle: "Primera Edición",
+      year: "2002"
     }
   ];
 
@@ -44,7 +71,7 @@ export default function Publicaciones() {
           </h1>
           <div className="w-16 h-1 bg-notaria-gold mx-auto mb-6"></div>
           <p className="text-lg md:text-xl text-notaria-dark/70 max-w-3xl mx-auto font-light leading-relaxed">
-            El compromiso con la excelencia jurídica de la Notaría 174 se extiende más allá de la práctica notarial diaria, contribuyendo activamente a la formación de nuevas generaciones y al desarrollo doctrinal del Derecho Notarial en México.
+            El compromiso con la excelencia jurídica de la Notaría 174 se extiende más allá de la práctica notarial diaria, contribuyendo activamente a la formación de nuevas generaciones y al desarrollo doctrinal del Derecho en México.
           </p>
         </motion.div>
 
@@ -66,7 +93,8 @@ export default function Publicaciones() {
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-notaria-dark">Trayectoria Docente</h2>
           </div>
           
-          <div className="space-y-12 relative z-10">
+          <div className="space-y-8 relative z-10">
+            
             <div className="flex flex-col md:flex-row md:items-start gap-6 group/item">
               <div className="md:w-1/3 flex-shrink-0">
                 <div className="flex items-center gap-3 mb-2">
@@ -76,9 +104,8 @@ export default function Publicaciones() {
                 <p className="text-notaria-gold font-medium text-sm ml-5">Facultad de Derecho</p>
               </div>
               <div className="md:w-2/3 bg-notaria-light p-6 rounded-2xl border border-transparent group-hover/item:border-notaria-gold/20 group-hover/item:bg-white transition-all duration-300">
-                <p className="text-notaria-dark/80 leading-relaxed text-lg">
-                  Profesor titular destacado, impartiendo cátedras especializadas en Derecho Civil y Derecho Notarial. Su labor se centra en formar con rigor analítico a futuros abogados, transmitiendo no solo el conocimiento de la ley, sino la ética y responsabilidad inherentes a la profesión jurídica.
-                </p>
+                <p className="text-notaria-dark/80 leading-relaxed font-semibold mb-2">Derecho Notarial</p>
+                <p className="text-notaria-dark/70 text-sm">Especialidad en Derecho Notarial y Registral (2009-2014).</p>
               </div>
             </div>
 
@@ -88,14 +115,38 @@ export default function Publicaciones() {
                   <div className="w-2 h-2 rounded-full bg-notaria-gold"></div>
                   <h3 className="font-bold text-xl text-notaria-dark">Escuela Libre de Derecho</h3>
                 </div>
-                <p className="text-notaria-gold font-medium text-sm ml-5">Ciudad de México</p>
               </div>
               <div className="md:w-2/3 bg-notaria-light p-6 rounded-2xl border border-transparent group-hover/item:border-notaria-gold/20 group-hover/item:bg-white transition-all duration-300">
-                <p className="text-notaria-dark/80 leading-relaxed text-lg">
-                  Catedrático en su alma máter, institución reconocida por su exigencia y excelencia académica. Allí fomenta los más altos estándares éticos, impartiendo materias relacionadas con las obligaciones civiles y los contratos, pilares fundamentales del derecho notarial.
-                </p>
+                <p className="text-notaria-dark/80 leading-relaxed font-semibold mb-2">Derecho Agrario</p>
+                <p className="text-notaria-dark/70 text-sm">Diplomado en Derecho Inmobiliario (2017-2018).</p>
               </div>
             </div>
+
+            <div className="flex flex-col md:flex-row md:items-start gap-6 group/item">
+              <div className="md:w-1/3 flex-shrink-0">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-2 h-2 rounded-full bg-notaria-gold"></div>
+                  <h3 className="font-bold text-xl text-notaria-dark">Otras Instituciones</h3>
+                </div>
+              </div>
+              <div className="md:w-2/3 bg-notaria-light p-6 rounded-2xl border border-transparent group-hover/item:border-notaria-gold/20 group-hover/item:bg-white transition-all duration-300">
+                <ul className="space-y-4">
+                  <li>
+                    <p className="text-notaria-dark/80 font-semibold">Mediación Privada en Materias Civil, Mercantil y Familiar</p>
+                    <p className="text-notaria-dark/70 text-sm">Instituto para la Paz, A.C. (2015-2016) / Colegio de Notarios de Puebla (2016).</p>
+                  </li>
+                  <li>
+                    <p className="text-notaria-dark/80 font-semibold">Derecho Inmobiliario y Societario</p>
+                    <p className="text-notaria-dark/70 text-sm">Universidad del Valle de México - UPM (2002) y Universidad Chapultepec (1995-1997).</p>
+                  </li>
+                  <li>
+                    <p className="text-notaria-dark/80 font-semibold">Derecho Notarial y Registral</p>
+                    <p className="text-notaria-dark/70 text-sm">UDLA (2000-2004) y Escuela Libre de Derecho de Puebla (2000-2003).</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </motion.section>
 
@@ -110,49 +161,67 @@ export default function Publicaciones() {
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-notaria-gold to-yellow-600 flex items-center justify-center text-white shadow-lg shadow-notaria-gold/30">
               <Library className="w-8 h-8" />
             </div>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-notaria-dark">Obras Destacadas</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-notaria-dark">Obras Publicadas</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {books.map((pub, idx) => (
               <motion.div 
                 key={idx}
-                whileHover={{ y: -10 }}
-                className="bg-white p-8 rounded-3xl border border-notaria-dark/10 shadow-lg hover:shadow-2xl hover:border-notaria-gold/50 transition-all duration-300 flex flex-col h-full group"
+                whileHover={{ y: -5 }}
+                className="bg-white p-6 rounded-2xl border border-notaria-dark/10 shadow-sm hover:shadow-xl hover:border-notaria-gold/50 transition-all duration-300 flex flex-col h-full group"
               >
-                <div className="w-12 h-12 rounded-full bg-notaria-light flex items-center justify-center mb-6 text-notaria-gold group-hover:bg-notaria-gold group-hover:text-white transition-colors duration-300">
-                  <BookOpen className="w-6 h-6" />
+                <div className="w-10 h-10 rounded-full bg-notaria-light flex items-center justify-center mb-4 text-notaria-gold group-hover:bg-notaria-gold group-hover:text-white transition-colors duration-300">
+                  <BookOpen className="w-5 h-5" />
                 </div>
                 <div className="flex-grow">
                   <span className="text-xs font-bold text-notaria-gold tracking-widest uppercase mb-2 block">{pub.year}</span>
-                  <h3 className="font-serif text-2xl font-bold text-notaria-dark mb-2 leading-tight">{pub.title}</h3>
-                  <p className="text-sm text-notaria-dark/50 italic mb-4">{pub.subtitle}</p>
-                  <p className="text-notaria-dark/80 leading-relaxed">{pub.desc}</p>
+                  <h3 className="font-serif text-lg font-bold text-notaria-dark mb-1 leading-tight">{pub.title}</h3>
+                  <p className="text-sm text-notaria-dark/60 italic">{pub.subtitle}</p>
                 </div>
               </motion.div>
             ))}
           </div>
         </motion.section>
 
-        {/* Articulos y Conferencias */}
+        {/* Articulos */}
         <motion.section 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 bg-notaria-dark text-white rounded-3xl p-8 md:p-10 shadow-xl border border-notaria-gold/30 flex flex-col md:flex-row items-center justify-between gap-8"
+          className="mt-20 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-notaria-dark/5"
         >
-          <div className="flex items-center gap-6">
-            <div className="w-16 h-16 rounded-full bg-notaria-gold/20 flex items-center justify-center text-notaria-gold flex-shrink-0">
+          <div className="flex items-center gap-5 mb-10">
+            <div className="w-16 h-16 rounded-2xl bg-notaria-gold/10 flex items-center justify-center text-notaria-gold">
               <FileText className="w-8 h-8" />
             </div>
-            <div>
-              <h3 className="font-serif text-2xl font-bold mb-2">Artículos y Conferencias</h3>
-              <p className="text-notaria-light/80 text-lg">
-                Participación constante en foros, congresos nacionales e internacionales y publicación regular en la Revista del Colegio de Notarios.
-              </p>
-            </div>
+            <h2 className="font-serif text-3xl font-bold text-notaria-dark">Artículos Destacados</h2>
           </div>
+          
+          <ul className="space-y-6">
+            <li className="flex gap-4">
+              <ChevronRight className="w-5 h-5 text-notaria-gold flex-shrink-0 mt-1" />
+              <div>
+                <p className="font-semibold text-notaria-dark text-lg">La fe pública del mediador privado, en caso de la Ciudad de México</p>
+                <p className="text-notaria-dark/60 text-sm">Homenaje al Dr. Othón Pérez Fernández del Castillo. Facultad de Derecho UNAM (2017).</p>
+              </div>
+            </li>
+            <li className="flex gap-4">
+              <ChevronRight className="w-5 h-5 text-notaria-gold flex-shrink-0 mt-1" />
+              <div>
+                <p className="font-semibold text-notaria-dark text-lg">Artículos en la Revista Mexicana de Derecho</p>
+                <p className="text-notaria-dark/60 text-sm">Colegio de Notarios del DF. Incluye temas como: "La Enajenación de la Empresa" (2009), "La Enajenación de Derechos Parcelarios" (2008), "Empresa" (2007) y "La Sociedad Cooperativa Moderna" (2001).</p>
+              </div>
+            </li>
+            <li className="flex gap-4">
+              <ChevronRight className="w-5 h-5 text-notaria-gold flex-shrink-0 mt-1" />
+              <div>
+                <p className="font-semibold text-notaria-dark text-lg">Artículos en la Revista de Derecho Notarial</p>
+                <p className="text-notaria-dark/60 text-sm">Asociación Nacional del Notariado Mexicano. "Eficacia judicial y extrajudicial del documento notarial" (2002) y "Seguridad jurídica notarial frente a la titulación administrativa" (2000).</p>
+              </div>
+            </li>
+          </ul>
         </motion.section>
 
       </div>
