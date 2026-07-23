@@ -38,12 +38,8 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-14 h-14 rounded-full border-2 border-notaria-gold overflow-hidden flex items-center justify-center bg-white shadow-sm transition-transform group-hover:scale-105">
-             <img src="/logo.jpeg" alt="Logo Notaría 174" className="w-full h-full object-cover" />
-          </div>
-          <div className="flex flex-col">
-            <span className={cn("font-serif text-lg font-bold leading-tight", isDarkBackground ? "text-white" : "text-notaria-dark dark:text-notaria-light")}>Notaría 174</span>
-            <span className="text-[10px] tracking-widest text-notaria-gold font-medium uppercase">Ciudad de México</span>
+          <div className="w-24 h-24 flex items-center justify-center transition-transform group-hover:scale-105">
+             <img src={isDarkBackground ? "/logo-light.png" : "/logo-transparent.png"} alt="Logo Notara 174" className="w-full h-full object-contain" />
           </div>
         </Link>
 
@@ -54,22 +50,22 @@ export default function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-notaria-gold relative",
-                pathname === link.href ? "text-notaria-gold" : isDarkBackground ? "text-white/90" : "text-notaria-dark dark:text-notaria-light"
+                "text-sm font-medium transition-colors hover:text-tertiary relative",
+                pathname === link.href ? "text-tertiary" : isDarkBackground ? "text-white/90" : "text-primary dark:text-background"
               )}
             >
               {link.label}
               {pathname === link.href && (
                 <motion.div
                   layoutId="active-nav"
-                  className="absolute -bottom-1 left-0 w-full h-[2px] bg-notaria-gold"
+                  className="absolute -bottom-1 left-0 w-full h-[2px] bg-tertiary"
                 />
               )}
             </Link>
           ))}
           <Link
             href="/contacto"
-            className="px-5 py-2 text-sm font-semibold text-white bg-notaria-gold rounded-full hover:bg-yellow-600 transition-colors shadow-md hover:shadow-lg"
+            className="px-5 py-2 text-sm font-semibold text-white bg-tertiary rounded-full hover:bg-yellow-600 transition-colors shadow-md hover:shadow-lg"
           >
             Agendar Asesoría
           </Link>
@@ -77,7 +73,7 @@ export default function Header() {
 
         {/* Mobile Toggle */}
         <button
-          className={cn("md:hidden p-2", isDarkBackground ? "text-white" : "text-notaria-dark dark:text-notaria-light")}
+          className={cn("md:hidden p-2", isDarkBackground ? "text-white" : "text-primary dark:text-background")}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -92,7 +88,7 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glassmorphism border-t border-notaria-gold/20"
+            className="md:hidden glassmorphism border-t border-tertiary/20"
           >
             <div className="flex flex-col px-6 py-4 space-y-4">
               {navLinks.map((link) => (
@@ -102,7 +98,7 @@ export default function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={cn(
                     "text-lg font-medium",
-                    pathname === link.href ? "text-notaria-gold" : "text-notaria-dark dark:text-notaria-light"
+                    pathname === link.href ? "text-tertiary" : "text-primary dark:text-background"
                   )}
                 >
                   {link.label}
@@ -111,7 +107,7 @@ export default function Header() {
               <Link
                 href="/contacto"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-4 px-6 py-3 text-center font-semibold text-white bg-notaria-gold rounded-full"
+                className="mt-4 px-6 py-3 text-center font-semibold text-white bg-tertiary rounded-full"
               >
                 Agendar Asesoría
               </Link>
@@ -122,3 +118,4 @@ export default function Header() {
     </header>
   );
 }
+

@@ -101,32 +101,32 @@ export default function Servicios() {
   ];
 
   return (
-    <div className="min-h-screen bg-notaria-light pt-32 pb-24 relative overflow-hidden">
+    <div className="min-h-screen bg-background pt-32 pb-24 relative overflow-hidden">
       {/* Background decorations */}
-      <div className="absolute top-0 right-0 w-full h-px bg-gradient-to-r from-transparent via-notaria-gold/30 to-transparent"></div>
-      <div className="absolute top-20 left-10 w-[30vw] h-[30vw] bg-notaria-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-full h-px bg-gradient-to-r from-transparent via-tertiary/30 to-transparent"></div>
+      <div className="absolute top-20 left-10 w-[30vw] h-[30vw] bg-tertiary/5 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="container mx-auto px-4 md:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-20 relative z-10">
-          <span className="text-notaria-gold font-semibold tracking-widest uppercase text-sm mb-4 block">Catálogo de Servicios</span>
+          <span className="text-tertiary font-semibold tracking-widest uppercase text-sm mb-4 block">Catálogo de Servicios</span>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-serif text-5xl md:text-6xl text-notaria-dark font-bold mb-6"
+            className="font-serif text-5xl md:text-6xl text-primary font-bold mb-6"
           >
             Servicios Notariales
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="w-16 h-1 bg-notaria-gold mx-auto mb-6"
+            className="w-16 h-1 bg-tertiary mx-auto mb-6"
           ></motion.div>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg md:text-xl text-notaria-dark/70 font-light"
+            className="text-lg md:text-xl text-primary/70 font-light"
           >
             Brindamos asesoría jurídica imparcial y fe pública en una amplia gama de actos y hechos jurídicos en la Ciudad de México, con la máxima atención al detalle.
           </motion.p>
@@ -157,13 +157,13 @@ export default function Servicios() {
                 viewport={{ once: true }}
                 className="mb-10"
               >
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-notaria-dark flex items-center gap-4">
-                  <span className="w-8 h-8 rounded-full bg-notaria-gold/20 flex items-center justify-center text-sm text-notaria-gold font-sans font-bold">
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary flex items-center gap-4">
+                  <span className="w-8 h-8 rounded-full bg-tertiary/20 flex items-center justify-center text-sm text-tertiary font-sans font-bold">
                     {catIdx + 1}
                   </span>
                   {category.title}
                 </h2>
-                <p className="text-notaria-dark/60 text-lg mt-2 ml-12">{category.desc}</p>
+                <p className="text-primary/60 text-lg mt-2 ml-12">{category.desc}</p>
               </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -188,3 +188,4 @@ export default function Servicios() {
     </div>
   );
 }
+

@@ -4,13 +4,13 @@
 
 :root {
   --background: #FDFBF7; /* Crema perlado */
-  --foreground: #2C1E16; /* Café oscuro */
+  --foreground: #4D2323; /* Primary */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1a120b;
-    --foreground: #FDFBF7;
+    --background: #1D312B; /* Secondary */
+    --foreground: #CCC3AB; /* Tertiary */
   }
 }
 
@@ -24,6 +24,6 @@ body {
     text-wrap: balance;
   }
   .glassmorphism {
-    @apply bg-white/70 backdrop-blur-md dark:bg-black/50 border-b border-notaria-gold/20;
+    @apply bg-white/70 backdrop-blur-md dark:bg-black/50 border-b border-tertiary/20;
   }
 }

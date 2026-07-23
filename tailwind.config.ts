@@ -10,11 +10,15 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        notaria: {
-          dark: "#2C1E16",
-          light: "#FDFBF7",
-          gold: "#C5A059",
-          muted: "#8A7A6D",
+        primary: {
+          DEFAULT: "#4D2323",
+          dark: "#2A1313", // A darker shade if needed, but not strictly required
+        },
+        secondary: {
+          DEFAULT: "#1D312B",
+        },
+        tertiary: {
+          DEFAULT: "#CCC3AB",
         },
       },
       fontFamily: {
